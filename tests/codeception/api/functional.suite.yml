@@ -11,7 +11,14 @@ modules:
     enabled:
       - Filesystem
       - Yii2
+      - REST:
+            depends: PhpBrowser
+      #- ApiHelper
       - tests\codeception\common\_support\FixtureHelper
     config:
         Yii2:
             configFile: '../config/api/functional.php'
+        #PhpBrowser:
+        #    url: http://localhost:8080
+        REST:
+            url: http://localhost:8080/api/web/index-test.php/

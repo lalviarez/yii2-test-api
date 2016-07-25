@@ -37,14 +37,18 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            'enableStrictParsing' => true,
             'rules' => [
+                [
+                    'class' => 'yii\rest\UrlRule', 
+                    'controller' => ['user']
+                ],
             ],
         ],
-        */
+        
     ],
     'params' => $params,
 ];
